@@ -35,7 +35,7 @@ mysqli_close($conn);
           </a>
         </div>
     </nav>
-    <!-- 슬라이드 -->
+    <!-- 료 슬라이드 -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
