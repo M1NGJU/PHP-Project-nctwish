@@ -6,7 +6,7 @@ if (!$conn) {
     die('데이터베이스 연결 실패: ' . mysqli_connect_error());
 }
 
-// "사쿠야"의 정보를 가져오는 SQL 쿼리 실행
+// " 사쿠야"의 정보를 가져오는 SQL 쿼리 실행
 $sql = "SELECT * FROM member WHERE name = '사쿠야'";
 $result = mysqli_query($conn, $sql);
 
@@ -37,7 +37,7 @@ mysqli_close($conn);
           </a>
         </div>
     </nav>
-    <!-- 료 슬라이드 -->
+    <!-- 사쿠야 슬라이드 -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
@@ -65,7 +65,36 @@ mysqli_close($conn);
         </button>
     </div>
 
-
+<!-- 사쿠야 정보 -->
+<div class="container mt-4">
+        <h2 class="text-center">Sakuya 정보</h2>
+        <?php if ($sakuya): ?> 
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>이름</th>
+                <td><?php echo htmlspecialchars($sakuya['name']); ?></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><?php echo htmlspecialchars($sakuya['birthday']); ?></td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><?php echo htmlspecialchars($sakuya['nationality']); ?></td>
+            </tr>
+            <tr>
+                <th>소속사</th>
+                <td><?php echo htmlspecialchars($sakuya['Enter']); ?></td>
+            </tr>
+            <tr>
+                <th>데뷔일</th>
+                <td><?php echo htmlspecialchars($sakuya['debut']); ?></td>
+            </tr>
+        </table>
+        <?php else: ?>
+            <p class="text-center">사쿠야의 정보가 없습니다.</p>
+        <?php endif; ?>
+    </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
