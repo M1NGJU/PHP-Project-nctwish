@@ -1,3 +1,23 @@
+<?php
+
+$conn = mysqli_connect('localhost', 'test', '1111', 'testdb');
+
+if (!$conn) {
+    die('데이터베이스 연결 실패: ' . mysqli_connect_error());
+}
+
+// "시온"의 정보를 가져오는 SQL 쿼리 실행
+$sql = "SELECT * FROM member WHERE name = '시온'";
+$result = mysqli_query($conn, $sql);
+
+// 데이터 가져오기
+$sion = mysqli_fetch_assoc($result);
+
+// MySQL 연결 닫기
+mysqli_close($conn);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,19 +64,34 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <!-- 시온 소개 -->
-    <div class="sion-text">
-        <p>프로필</p>
-        <div class="sion-information">
-            <h5>이름 : 오시온</h5>
-            <h5>출생 : 2002.05.11</h5>
-            <h5>국적 : 대한민국</h5>
-            <h5>소속사 : SM엔터테이먼트</h5>
-            <h5>데뷔 : 2024.02.21 NCT WISH</h5>
-        </div>
-        <div class="sion-cam">
-          <p>시온 직캠</p>
-        </div>
+    <div class="container mt-4">
+        <h2 class="text-center">SION 정보</h2>
+        <?php if ($sion): ?> 
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>이름</th>
+                <td><?php echo htmlspecialchars($sion['name']); ?></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><?php echo htmlspecialchars($sion['birthday']); ?></td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><?php echo htmlspecialchars($sion['nationality']); ?></td>
+            </tr>
+            <tr>
+                <th>소속사</th>
+                <td><?php echo htmlspecialchars($sion['Enter']); ?></td>
+            </tr>
+            <tr>
+                <th>데뷔일</th>
+                <td><?php echo htmlspecialchars($sion['debut']); ?></td>
+            </tr>
+        </table>
+        <?php else: ?>
+            <p class="text-center">사쿠야의 정보가 없습니다.</p>
+        <?php endif; ?>
     </div>
 </body>
 </html>

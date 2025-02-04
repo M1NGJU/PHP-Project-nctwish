@@ -66,7 +66,7 @@ mysqli_close($conn);
     </div>
 
 <!-- 사쿠야 정보 -->
-<div class="container mt-4">
+    <div class="container mt-4">
         <h2 class="text-center">Sakuya 정보</h2>
         <?php if ($sakuya): ?> 
         <table class="table table-bordered text-center">
