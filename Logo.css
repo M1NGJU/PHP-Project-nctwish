@@ -1,0 +1,20 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFFB9; /* 초기 배경 색상 */
+    transition: opacity 2s ease-out, background-color 2s ease-out; /* 배경색과 opacity를 함께 부드럽게 전환 */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+}
