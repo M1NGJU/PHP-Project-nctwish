@@ -6,7 +6,15 @@ if (!$conn) {
     die('데이터베이스 연결 실패: ' . mysqli_connect_error());
 }
 
+// "료"의 정보를 가져오는 SQL 쿼리 실행
+$sql = "SELECT * FROM member WHERE name = '료'";
+$result = mysqli_query($conn, $sql);
 
+// 데이터 가져오기
+$ryo = mysqli_fetch_assoc($result);
+
+// MySQL 연결 닫기
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +61,36 @@ if (!$conn) {
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+    </div>
+    <!-- 료 정보 -->
+    <div class="container mt-4">
+        <h2 class="text-center">Ryo 정보</h2>
+        <?php if ($ryo): ?>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>이름</th>
+                <td><?php echo htmlspecialchars($ryo['name']); ?></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><?php echo htmlspecialchars($ryo['birthday']); ?></td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><?php echo htmlspecialchars($ryo['nationality']); ?></td>
+            </tr>
+            <tr>
+                <th>소속사</th>
+                <td><?php echo htmlspecialchars($ryo['Enter']); ?></td>
+            </tr>
+            <tr>
+                <th>데뷔일</th>
+                <td><?php echo htmlspecialchars($ryo['debut']); ?></td>
+            </tr>
+        </table>
+        <?php else: ?>
+            <p class="text-center">료의 정보가 없습니다.</p>
+        <?php endif; ?>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
