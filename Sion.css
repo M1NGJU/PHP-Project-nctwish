@@ -16,6 +16,14 @@
     font-size: 2rem;
     font-weight: bold;
 }
+.sion-cam {
+    position: relative;
+    top: 180px;  /* 원하는 만큼 더 내려줌 (예: 300px) */
+    color: #BBE309; 
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .sion-information {
     position: relative;
     top: 100px;  /* 원하는 만큼 내려줌 */
