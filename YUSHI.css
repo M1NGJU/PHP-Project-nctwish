@@ -1,0 +1,5 @@
+.navbar-brand {
+    color: #BBE309 !important; /* 원하는 색상으로 변경 */
+    font-weight: bold; /* 글자 굵기 변경 (선택 사항) */
+    font-size: 20px; /* 글자 크기 변경 (선택 사항) */
+}
