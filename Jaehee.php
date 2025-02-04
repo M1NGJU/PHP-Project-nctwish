@@ -1,13 +1,23 @@
 <?php
-
+// 데이터베이스 연결
 $conn = mysqli_connect('localhost', 'test', '1111', 'testdb');
 
 if (!$conn) {
     die('데이터베이스 연결 실패: ' . mysqli_connect_error());
 }
 
+// "재희"의 정보를 가져오는 SQL 쿼리 실행
+$sql = "SELECT * FROM member WHERE name = '재희'";
+$result = mysqli_query($conn, $sql);
+
+// 데이터 가져오기
+$jaehee = mysqli_fetch_assoc($result);
+
+// MySQL 연결 닫기
+mysqli_close($conn);
 ?>
-<!-- html 코드 -->
+
+<!-- HTML 시작 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +25,10 @@ if (!$conn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaehee</title>
     <link rel="stylesheet" href="Jaehee.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- nav바 -->
+    <!-- 네비게이션 바 -->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -27,12 +37,13 @@ if (!$conn) {
           </a>
         </div>
     </nav>
+
     <!-- 슬라이드 -->
     <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -54,7 +65,40 @@ if (!$conn) {
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+    <!-- 재희 정보 테이블 -->
+    <div class="container mt-4">
+        <h2 class="text-center">Jaehee 정보</h2>
+        <?php if ($jaehee): ?>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>이름</th>
+                <td><?php echo htmlspecialchars($jaehee['name']); ?></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><?php echo htmlspecialchars($jaehee['birthday']); ?></td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><?php echo htmlspecialchars($jaehee['nationality']); ?></td>
+            </tr>
+            <tr>
+                <th>소속사</th>
+                <td><?php echo htmlspecialchars($jaehee['Enter']); ?></td>
+            </tr>
+            <tr>
+                <th>데뷔일</th>
+                <td><?php echo htmlspecialchars($jaehee['debut']); ?></td>
+            </tr>
+        </table>
+        <?php else: ?>
+            <p class="text-center">재희의 정보가 없습니다.</p>
+        <?php endif; ?>
+    </div>
+
+    <!-- Bootstrap 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
