@@ -1,3 +1,22 @@
+<?php
+
+$conn = mysqli_connect('localhost', 'test', '1111', 'testdb');
+
+if (!$conn) {
+    die('데이터베이스 연결 실패: ' . mysqli_connect_error());
+}
+
+// "유우시"의 정보를 가져오는 SQL 쿼리 실행
+$sql = "SELECT * FROM member WHERE name = '유우시'";
+$result = mysqli_query($conn, $sql);
+
+// 데이터 가져오기
+$yushi = mysqli_fetch_assoc($result);
+
+// MySQL 연결 닫기
+mysqli_close($conn);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,18 +63,34 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="yushi-text">
-        <p>프로필</p>
-        <div class="yushi-information">
-            <h5>이름 : 토쿠노 유우시</h5>
-            <h5>출생 : 2004.04.05</h5>
-            <h5>국적 : 일본</h5>
-            <h5>소속사 : SM엔터테이먼트</h5>
-            <h5>데뷔 : 2024.02.21 NCT WISH</h5>
-        </div>
-        <div class="yushi-cam">
-          <p>유우시 직캠</p>
-        </div>
+    <div class="container mt-4">
+        <h2 class="text-center">YUSHI 정보</h2>
+        <?php if ($yushi): ?> 
+        <table class="table table-bordered text-center">
+            <tr>
+                <th>이름</th>
+                <td><?php echo htmlspecialchars($yushi['name']); ?></td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td><?php echo htmlspecialchars($yushi['birthday']); ?></td>
+            </tr>
+            <tr>
+                <th>국적</th>
+                <td><?php echo htmlspecialchars($yushi['nationality']); ?></td>
+            </tr>
+            <tr>
+                <th>소속사</th>
+                <td><?php echo htmlspecialchars($yushi['Enter']); ?></td>
+            </tr>
+            <tr>
+                <th>데뷔일</th>
+                <td><?php echo htmlspecialchars($yushi['debut']); ?></td>
+            </tr>
+        </table>
+        <?php else: ?>
+            <p class="text-center">유우시 정보가 없습니다.</p>
+        <?php endif; ?>
     </div>
 </body>
 </html>

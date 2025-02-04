@@ -8,29 +8,3 @@
     width: auto;
     object-fit: cover; /* 비율 유지하면서 자르기 */
 }
-.yushi-text{
-    position: relative;
-    top: 100px;  /* 원하는 만큼 내려줌 */
-    margin-left: 60px;
-    color: #BBE309; 
-    font-size: 2rem;
-    font-weight: bold;
-}
-.yushi-cam {
-    position: relative;
-    top: 180px;  /* 원하는 만큼 더 내려줌 (예: 300px) */
-    color: #BBE309; 
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.yushi-information {
-    position: relative;
-    top: 100px;  /* 원하는 만큼 내려줌 */
-    left: 50%;  /* 수평 가운데 정렬 */
-    transform: translateX(-50%);  /* 정확한 가운데 정렬 */
-    color: black; 
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: justify;  /* 텍스트 가운데 정렬 */
-}
