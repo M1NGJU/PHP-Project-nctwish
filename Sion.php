@@ -90,7 +90,7 @@ mysqli_close($conn);
             </tr>
         </table>
         <?php else: ?>
-            <p class="text-center">사쿠야의 정보가 없습니다.</p>
+            <p class="text-center">시온의 정보가 없습니다.</p>
         <?php endif; ?>
     </div>
 </body>
