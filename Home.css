@@ -16,3 +16,25 @@
     width: 290px;
     height: auto;
 }
+.member {
+    position: relative;
+    top: 100px;
+    margin-left: 60px;
+    color: #BBE309 !important;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.member-img {
+    display: flex;            /* flexbox 활성화 */
+    justify-content: center;  /* 수평 가운데 정렬 */
+    align-items: center;      /* 수직 가운데 정렬 */
+    margin: 0 auto;           /* 자동 여백을 통해 부모 div에서 가운데 정렬 */
+    margin-bottom: 20px;      /* 이미지와 다른 텍스트 간의 간격 */
+}
+
+.member-img img {
+    width: 190px;  /* 원하는 너비로 설정 */
+    height: auto;  /* 비율을 유지하면서 높이 자동 조정 */
+    margin: 10px;  /* 이미지 주변에 간격 추가 */
+}
