@@ -8,3 +8,8 @@
     width: 100px;
     height: 24px;
 }
+.carousel-item img {
+    max-height: 700px; /* 원하는 높이 */
+    width: auto;
+    object-fit: cover; /* 비율 유지하면서 자르기 */
+}
