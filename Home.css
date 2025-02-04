@@ -7,3 +7,12 @@
     width: 100%;
     height: auto;
 }
+
+.text {
+    position: absolute;
+    top: 30%;  /* 원하는 위치로 조정 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 가운데 정렬 */
+    width: 290px;
+    height: auto;
+}
