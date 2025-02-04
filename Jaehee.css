@@ -1,0 +1,10 @@
+.navbar-brand {
+    color: #BBE309 !important; /* 원하는 색상으로 변경 */
+    font-weight: bold; /* 글자 굵기 변경 (선택 사항) */
+    font-size: 20px; /* 글자 크기 변경 (선택 사항) */
+}
+.carousel-item img {
+    max-height: 700px; /* 원하는 높이 */
+    width: auto;
+    object-fit: cover; /* 비율 유지하면서 자르기 */
+}
