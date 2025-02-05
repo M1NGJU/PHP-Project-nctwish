@@ -21,7 +21,7 @@
     font-weight: bold;
 }
 .youtube-title {
-    margin-left: 30px;
+    margin-top: 120px;
     color: #BBE309;
     font-weight: bold;
 }
@@ -46,8 +46,8 @@
 }
 
 .youtube-carousel iframe {
-    width: 120px;  /* 아주 작게 줄이기 */
-    height: 70px;
+    width: 280px;  /* 아주 작게 줄이기 */
+    height: 170px;
     flex: 0 0 auto; /* 크기 유지 */
 }
 

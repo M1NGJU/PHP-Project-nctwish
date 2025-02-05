@@ -44,8 +44,9 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YtD6TLCKLI8?si=_aSFkIrpwtmuVefM" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/KZTJAWFW_GM?si=znw4eM5Ve9CW-plM" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TEYygTDBcK4?si=-pg4PDITytOm8LmH" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE1" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE2" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rkNnogEAX00?si=ho5-TfIW3T6yiIyl" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8BGikyr8Wk?si=Cmfn5qmJIcYXFrz6" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R319nIK_P4s?si=fkZI7YDU9dLcIBWb" allowfullscreen></iframe>
         </div>
         <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button> <!-- 오른쪽 버튼 -->
     </div>
