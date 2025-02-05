@@ -16,8 +16,52 @@
     width: 290px;
     height: auto;
 }
-h2 {
+.container h2 {
+    color: #BBE309;
+    font-weight: bold;
+}
+.youtube-title {
+    margin-left: 30px;
     color: #BBE309;
     font-weight: bold;
 }
 
+.youtube-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+}
+
+.youtube-carousel {
+    display: flex;
+    overflow-x: auto;  /* 가로 스크롤 가능 */
+    white-space: nowrap; /* 줄 바꿈 방지 */
+    gap: 10px; /* 영상 사이 간격 */
+    padding: 10px;
+    scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+
+.youtube-carousel iframe {
+    width: 120px;  /* 아주 작게 줄이기 */
+    height: 70px;
+    flex: 0 0 auto; /* 크기 유지 */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-btn {
+    background-color: #BBE309;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 10px;
+}
