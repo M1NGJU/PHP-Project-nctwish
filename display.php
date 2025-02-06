@@ -51,6 +51,27 @@
         </div>
     </div>
 
+    <!-- 위시 사진 모음 -->
+    <div class="container mt-4">
+        <h2 class="youtube-title">NCT WISH 사진 모음</h2>
+
+        <div class="youtube-wrapper">
+            <button class="carousel-btn" onclick="scrollLeft()">&#10094;</button>  <!-- 왼쪽 버튼 -->
+
+            <div class="youtube-carousel">
+                <img src="img/image2.png">
+                <img src="img/image3.png">
+                <img src="img/image4.png">
+                <img src="img/image5.png">
+                <img src="img/image6.png">
+                <img src="img/image7.png">
+                <img src="img/image8.png">
+                <img src="img/image9.png">
+            </div>
+
+            <button class="carousel-btn" onclick="scrollRight()">&#10095;</button>  <!-- 오른쪽 버튼 -->
+        </div>
+    </div>
 
     <!-- JavaScript-->
     <script>

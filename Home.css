@@ -24,7 +24,6 @@
     margin-top: 120px;
     color: #BBE309;
     font-weight: bold;
-    text-align: center;
 }
 
 /* 유튜브 전체 컨테이너 */
@@ -74,4 +73,10 @@
 
 .carousel-btn:hover {
     background-color: #99c10c;
+}
+/* 이미지 크기 조정 */
+.youtube-carousel img {
+    width: 300px;  /* 너비를 200px로 설정 */
+    height: auto;  /* 비율에 맞게 높이 자동 조정 */
+    object-fit: cover;  /* 이미지 비율을 유지하면서 크기를 맞추는 속성 */
 }
