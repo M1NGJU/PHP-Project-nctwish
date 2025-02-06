@@ -38,20 +38,19 @@
 
    <!-- 유튜브 영상 모음 -->
     <div class="container mt-4">
-        <h2 class="youtube-title">WISH 영상 모음</h2>
+        <h2 class="youtube-title">NCT WISH 영상 모음</h2>
+
         <div class="youtube-wrapper">
-            <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button> <!-- 왼쪽 버튼 -->
+            <button class="carousel-btn" onclick="scrollLeft()">&#10094;</button>  <!-- 왼쪽 버튼 -->
+
             <div class="youtube-carousel">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YtD6TLCKLI8?si=_aSFkIrpwtmuVefM" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KZTJAWFW_GM?si=znw4eM5Ve9CW-plM" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TEYygTDBcK4?si=-pg4PDITytOm8LmH" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/rkNnogEAX00?si=ho5-TfIW3T6yiIyl" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y8BGikyr8Wk?si=Cmfn5qmJIcYXFrz6" allowfullscreen></iframe>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/R319nIK_P4s?si=fkZI7YDU9dLcIBWb" allowfullscreen></iframe>
+                <?php include 'youtube.php'; ?>  <!-- 유튜브 API로 가져온 동영상 -->
             </div>
-            <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button> <!-- 오른쪽 버튼 -->
+
+            <button class="carousel-btn" onclick="scrollRight()">&#10095;</button>  <!-- 오른쪽 버튼 -->
         </div>
     </div>
+
 
     <!-- JavaScript-->
     <script>
