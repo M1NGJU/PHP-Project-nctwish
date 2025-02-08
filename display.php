@@ -16,52 +16,23 @@
     </div>
     <!-- 멤버 이미지 카드 형식 -->
     <div class="container mt-4">
-        <h2>NCT WISH</h2>
         <div class="row">
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="Sion.php">
-                        <img src="img/member-sion.png" class="card-img-top" alt="Sion">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="Riku.php">
-                        <img src="img/member-riku.png" class="card-img-top" alt="Riku">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="Yushi.php">
-                        <img src="img/member-yushi.png" class="card-img-top" alt="Yushi">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="Jaehee.php">
-                        <img src="img/member-jaehee.png" class="card-img-top" alt="Jaehee">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="ryo.php">
-                        <img src="img/member-ryo.png" class="card-img-top" alt="Ryo">
-                    </a>
-                </div>
-            </div>
-            <div class="col-2 mb-4">
-                <div class="card">
-                    <a href="Sakuya.php">
-                        <img src="img/member-sakuya.png" class="card-img-top" alt="Sakuya">
-                    </a>
-                </div>
-            </div>
+        <h2 class="youtube-title">NCT WISH 멤버</h2>
+            <?php
+            include 'db.php';
+            $result = $conn->query("SELECT image_path FROM member_images");
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center">';
+                echo '<div class="card mb-3" style="width: 100%;">';
+                echo '<img src="' . $row["image_path"] . '" class="card-img-top" style="width: 100%; height: auto;">';
+                echo '</div>';
+                echo '</div>';
+            }
+            $conn->close();
+            ?>
         </div>
     </div>
+
 
    <!-- 유튜브 영상 모음 -->
     <div class="container mt-4">
