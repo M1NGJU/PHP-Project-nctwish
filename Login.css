@@ -1,0 +1,63 @@
+/* 전체 페이지 스타일 */
+body {
+    background-color: #BBE309;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 제목 스타일 */
+h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 로그인 폼 스타일 */
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 라벨 스타일 (왼쪽 정렬) */
+label {
+    align-self: flex-start;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* 입력 필드 스타일 */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* 버튼 스타일 */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #218838;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c7430;
+    color: white;
+}

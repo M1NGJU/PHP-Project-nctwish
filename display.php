@@ -55,7 +55,7 @@
 
         <div class="youtube-wrapper">
             <button class="carousel-btn" onclick="scrollLeft()">&#10094;</button>  <!-- 왼쪽 버튼 -->
-
+            <!-- 나중에 이미지 디비에 저장하고 가져오는 걸로 변경 -->
             <div class="youtube-carousel">
                 <img src="img/image2.png">
                 <img src="img/image3.png">
@@ -70,7 +70,6 @@
             <button class="carousel-btn" onclick="scrollRight()">&#10095;</button>  <!-- 오른쪽 버튼 -->
         </div>
     </div>
-
     <!-- JavaScript-->
     <script>
         function scrollLeft() {
@@ -81,7 +80,6 @@
             document.querySelector(".youtube-carousel").scrollBy({ left: 600, behavior: 'smooth' });
         }
     </script>
-
 </body>
 </html>
 
